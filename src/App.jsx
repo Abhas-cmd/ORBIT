@@ -1,15 +1,9 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Features />
-    </>
-  );
+    <div>
+      <h1>ORBIT is working 🚀</h1>
+    </div>
+  )
 }
 
-export default App;
+export default App
