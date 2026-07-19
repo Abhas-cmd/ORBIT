@@ -17,16 +17,13 @@ function HowItWorks() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-[#050816] pt-32 pb-20 px-6 text-white overflow-hidden">
-
-      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-violet-600/20 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
+    <section className="relative min-h-screen bg-black pt-32 pb-20 px-6 text-white overflow-hidden">
 
       <div className="max-w-6xl mx-auto relative z-10">
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <h1 className="text-5xl font-bold mb-6">How It Works</h1>
-          <p className="text-lg text-slate-300 leading-relaxed max-w-3xl">
+          <h1 className="text-5xl font-bold mb-6 tracking-tight">How It Works</h1>
+          <p className="text-lg text-slate-400 leading-relaxed max-w-3xl">
             Whether you're requesting a video or creating one, ORBIT keeps the process simple from start to finish.
           </p>
         </motion.div>
@@ -35,10 +32,10 @@ function HowItWorks() {
           <h2 className="text-2xl font-semibold mb-8">For Clients</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {clientSteps.map((step, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full hover:border-violet-500/50 transition backdrop-blur-sm">
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full hover:border-white/30 transition">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-violet-600/20 rounded-full w-10 h-10 flex items-center justify-center text-violet-400 font-bold">{i + 1}</div>
-                  <step.icon className="text-violet-400" size={22} />
+                  <div className="bg-white/10 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold">{i + 1}</div>
+                  <step.icon className="text-white" size={22} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
@@ -51,10 +48,10 @@ function HowItWorks() {
           <h2 className="text-2xl font-semibold mb-8">For Creators</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {creatorSteps.map((step, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full hover:border-violet-500/50 transition backdrop-blur-sm">
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full hover:border-white/30 transition">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-violet-600/20 rounded-full w-10 h-10 flex items-center justify-center text-violet-400 font-bold">{i + 1}</div>
-                  <step.icon className="text-violet-400" size={22} />
+                  <div className="bg-white/10 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold">{i + 1}</div>
+                  <step.icon className="text-white" size={22} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>

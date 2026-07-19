@@ -39,7 +39,7 @@ function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-4">Connect</h3>
           <div className="flex gap-4 text-slate-400">
-            <a href="#" className="hover:text-violet-400 transition" aria-label="Instagram">
+            <a href="https://www.instagram.com/orbit.qc?igsh=MXNjZHc1dTVibjNrdQ==" target="_blank" rel="noopener noreferrer" className="hover:text-white transition" aria-label="Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>

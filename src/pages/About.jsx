@@ -10,16 +10,13 @@ function About() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-[#050816] pt-32 pb-20 px-6 text-white overflow-hidden">
-
-      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-violet-600/20 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
+    <section className="relative min-h-screen bg-black pt-32 pb-20 px-6 text-white overflow-hidden">
 
       <div className="max-w-5xl mx-auto relative z-10">
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <h1 className="text-5xl font-bold mb-6">About ORBIT</h1>
-          <p className="text-lg text-slate-300 leading-relaxed max-w-3xl">
+          <h1 className="text-5xl font-bold mb-6 tracking-tight">About ORBIT</h1>
+          <p className="text-lg text-slate-400 leading-relaxed max-w-3xl">
             ORBIT is an on-demand platform built to close the gap between businesses that need great short-form video content and the creators who can bring it to life. We handle the connection, the editing workflow, delivery, and payments — so both sides can focus on what they do best.
           </p>
         </motion.div>
@@ -33,8 +30,8 @@ function About() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {values.map((value, i) => (
-            <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-violet-500/50 transition backdrop-blur-sm">
-              <value.icon className="text-violet-400 mb-3" size={28} />
+            <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/30 transition">
+              <value.icon className="text-white mb-3" size={28} />
               <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
               <p className="text-slate-400 text-sm leading-relaxed">{value.desc}</p>
             </div>

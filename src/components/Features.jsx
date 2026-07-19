@@ -48,10 +48,10 @@ const features = [
 
 function Features() {
   return (
-    <section className="bg-[#070b1a] py-24 px-6">
+    <section className="bg-black py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
-        <h2 className="text-5xl font-bold text-center text-white">
+        <h2 className="text-5xl font-bold text-center text-white tracking-tight">
           Why Choose ORBIT?
         </h2>
 
@@ -65,9 +65,9 @@ function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg transition duration-300 hover:-translate-y-2 hover:border-violet-500 hover:shadow-[0_0_40px_rgba(124,58,237,0.35)]"
+              className="rounded-3xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:-translate-y-2 hover:border-white/40"
             >
-              <div className="text-violet-400 mb-6">
+              <div className="text-white mb-6">
                 {feature.icon}
               </div>
 

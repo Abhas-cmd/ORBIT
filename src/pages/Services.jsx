@@ -15,29 +15,26 @@ function Services() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-[#050816] pt-32 pb-20 px-6 text-white overflow-hidden">
-
-      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-violet-600/20 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
+    <section className="relative min-h-screen bg-black pt-32 pb-20 px-6 text-white overflow-hidden">
 
       <div className="max-w-6xl mx-auto relative z-10">
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <h1 className="text-5xl font-bold mb-6">Our Services</h1>
-          <p className="text-lg text-slate-300 leading-relaxed max-w-3xl">
+          <h1 className="text-5xl font-bold mb-6 tracking-tight">Our Services</h1>
+          <p className="text-lg text-slate-400 leading-relaxed max-w-3xl">
             ORBIT works for both sides — businesses that need great video content, and creators ready to make it. Here's what each side gets.
           </p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-16">
           <div className="flex items-center gap-3 mb-6">
-            <Briefcase className="text-violet-400" size={28} />
+            <Briefcase className="text-white" size={28} />
             <h2 className="text-2xl font-semibold">For Clients</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {clientServices.map((service, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-violet-500/50 transition backdrop-blur-sm">
-                <service.icon className="text-violet-400 mb-3" size={26} />
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/30 transition">
+                <service.icon className="text-white mb-3" size={26} />
                 <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{service.desc}</p>
               </div>
@@ -47,13 +44,13 @@ function Services() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mt-16">
           <div className="flex items-center gap-3 mb-6">
-            <Camera className="text-violet-400" size={28} />
+            <Camera className="text-white" size={28} />
             <h2 className="text-2xl font-semibold">For Creators</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {creatorServices.map((service, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-violet-500/50 transition backdrop-blur-sm">
-                <service.icon className="text-violet-400 mb-3" size={26} />
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/30 transition">
+                <service.icon className="text-white mb-3" size={26} />
                 <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{service.desc}</p>
               </div>
@@ -61,10 +58,10 @@ function Services() {
           </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-16 text-center bg-violet-600/10 border border-violet-500/30 rounded-2xl p-10">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-16 text-center bg-white/5 border border-white/10 rounded-2xl p-10">
           <h3 className="text-2xl font-bold mb-3">Ready to get started?</h3>
-          <p className="text-slate-300 mb-6">Join ORBIT as a client or a creator — the platform works for you either way.</p>
-          <button className="bg-violet-600 px-8 py-3 rounded-full hover:bg-violet-500 transition font-semibold">Get Started</button>
+          <p className="text-slate-400 mb-6">Join ORBIT as a client or a creator — the platform works for you either way.</p>
+          <button className="bg-white text-black px-8 py-3 rounded-md hover:bg-slate-200 transition font-semibold">Get Started</button>
         </motion.div>
 
       </div>
