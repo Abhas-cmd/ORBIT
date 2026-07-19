@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -9,7 +11,6 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import SignUp from "./pages/SignUp";
 
-// ADD THESE 4 IMPORTS
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import UserAgreement from "./pages/UserAgreement";
@@ -18,7 +19,10 @@ import CreatorAgreement from "./pages/CreatorAgreement";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -28,12 +32,12 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/signup" element={<SignUp />} />
 
-        {/* ADD THESE 4 ROUTES */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/user-agreement" element={<UserAgreement />} />
         <Route path="/creator-agreement" element={<CreatorAgreement />} />
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );
