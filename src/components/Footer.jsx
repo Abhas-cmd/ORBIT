@@ -21,7 +21,7 @@ function Footer() {
             <li><Link to="/about" className="hover:text-white transition">About</Link></li>
             <li><Link to="/services" className="hover:text-white transition">Services</Link></li>
             <li><Link to="/how-it-works" className="hover:text-white transition">How It Works</Link></li>
-            <li><Link to="/contact" className="hover:text-white transition">Contact</Link></li>
+            <li><Link to="/faq" className="hover:text-white transition">FAQ</Link></li>
           </ul>
         </div>
 
@@ -58,7 +58,7 @@ function Footer() {
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </a>
-            <a href="mailto:contact@orbit.com" className="hover:text-violet-400 transition" aria-label="Email">
+            <a href="mailto:Orbit.quickcontent@gmail.com" className="hover:text-violet-400 transition" aria-label="Email">
               <Mail size={20} />
             </a>
           </div>

@@ -39,7 +39,7 @@ function Contact() {
               <Mail className="text-violet-400 mt-1" size={24} />
               <div>
                 <h3 className="font-semibold mb-1">Email Us</h3>
-                <a href="mailto:contact@orbit.com" className="text-slate-400 text-sm hover:text-white transition">contact@orbit.com</a>
+                <a href="mailto:Orbit.quickcontent@gmail.com" className="text-slate-400 text-sm hover:text-white transition">Orbit.quickcontent@gmail.com</a>
               </div>
             </div>
 
