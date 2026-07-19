@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 function SignUp() {
   const [role, setRole] = useState("client");
-  const [formData, setFormData] = useState({ name: "", email: "", password: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", password: "", confirmPassword: "" });
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -13,6 +14,11 @@ function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.password !== formData.confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+    setError("");
     console.log("Sign up submitted:", { role, ...formData });
   };
 
@@ -59,6 +65,18 @@ function SignUp() {
               <input type="password" name="password" required value={formData.password} onChange={handleChange} className="w-full bg-white/5 border border-white/10 rounded-md pl-11 pr-4 py-3 text-white focus:outline-none focus:border-white/40 transition" placeholder="••••••••" />
             </div>
           </div>
+
+          <div>
+            <label className="block text-sm text-slate-400 mb-1">Confirm Password</label>
+            <div className="relative">
+              <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
+              <input type="password" name="confirmPassword" required value={formData.confirmPassword} onChange={handleChange} className="w-full bg-white/5 border border-white/10 rounded-md pl-11 pr-4 py-3 text-white focus:outline-none focus:border-white/40 transition" placeholder="••••••••" />
+            </div>
+          </div>
+
+          {error && (
+            <p className="text-red-400 text-sm">{error}</p>
+          )}
 
           <button type="submit" className="w-full bg-white text-black hover:bg-slate-200 transition rounded-md py-3 font-semibold mt-2">
             Sign Up as {role === "client" ? "Client" : "Creator"}
