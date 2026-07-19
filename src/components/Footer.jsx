@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import { Mail, Globe } from "lucide-react";
+import { Mail } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-black/40 backdrop-blur-lg border-t border-white/10 mt-20">
+    <footer className="bg-black border-t border-white/10">
       <div className="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
 
-        {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold tracking-wider text-white mb-3">ORBIT</h2>
           <p className="text-slate-400 text-sm leading-relaxed">
@@ -14,7 +13,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className="text-white font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-slate-400 text-sm">
@@ -25,18 +23,16 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Legal */}
-<div>
-  <h3 className="text-white font-semibold mb-4">Legal</h3>
-  <ul className="space-y-2 text-slate-400 text-sm">
-    <li><Link to="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
-    <li><Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link></li>
-    <li><Link to="/user-agreement" className="hover:text-white transition">User Agreement</Link></li>
-    <li><Link to="/creator-agreement" className="hover:text-white transition">Creator Agreement</Link></li>
-  </ul>
-</div>
+        <div>
+          <h3 className="text-white font-semibold mb-4">Legal</h3>
+          <ul className="space-y-2 text-slate-400 text-sm">
+            <li><Link to="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
+            <li><Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link></li>
+            <li><Link to="/user-agreement" className="hover:text-white transition">User Agreement</Link></li>
+            <li><Link to="/creator-agreement" className="hover:text-white transition">Creator Agreement</Link></li>
+          </ul>
+        </div>
 
-        {/* Social */}
         <div>
           <h3 className="text-white font-semibold mb-4">Connect</h3>
           <div className="flex gap-4 text-slate-400">
@@ -47,19 +43,19 @@ function Footer() {
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="#" className="hover:text-violet-400 transition" aria-label="Twitter">
+            <a href="#" className="hover:text-white transition" aria-label="Twitter">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
               </svg>
             </a>
-            <a href="#" className="hover:text-violet-400 transition" aria-label="LinkedIn">
+            <a href="#" className="hover:text-white transition" aria-label="LinkedIn">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </a>
-            <a href="mailto:Orbit.quickcontent@gmail.com" className="hover:text-violet-400 transition" aria-label="Email">
+            <a href="mailto:Orbit.quickcontent@gmail.com" className="hover:text-white transition" aria-label="Email">
               <Mail size={20} />
             </a>
           </div>

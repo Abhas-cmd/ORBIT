@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 function Terms() {
   return (
-    <section className="relative min-h-screen bg-black pt-32 pb-20 px-6 text-white overflow-hidden">
-      <div className="max-w-4xl mx-auto relative z-10">
+    <section className="min-h-screen bg-black pt-32 pb-20 px-6 text-white">
+      <div className="max-w-4xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <h1 className="text-5xl font-bold mb-4 tracking-tight">Terms & Conditions</h1>
           <p className="text-slate-500 text-sm mb-12">Last updated: {new Date().toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</p>

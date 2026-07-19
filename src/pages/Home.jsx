@@ -3,21 +3,21 @@ import Features from "../components/Features";
 
 function Home() {
   return (
-    <div className="relative bg-black">
+    <div className="relative bg-black min-h-screen">
 
-      {/* Fixed video background covering the whole page */}
+      {/* Video background — contained within Home only */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="fixed inset-0 w-full h-full object-cover opacity-70 z-0"
+        className="absolute inset-0 w-full h-full object-cover opacity-70 z-0"
       >
         <source src="/Videos/video1.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark overlay for readability, also fixed */}
-      <div className="fixed inset-0 bg-black/20 z-0"></div>
+      {/* Dark overlay — also contained */}
+      <div className="absolute inset-0 bg-black/20 z-0"></div>
 
       <div className="relative z-10">
         <Hero />
