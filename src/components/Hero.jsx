@@ -46,18 +46,57 @@ function Hero() {
 
         </div>
 
-        {/* Right Side */}
+        {/* Right Side — Aperture visual */}
         <div className="flex items-center justify-center">
 
-          <div className="relative scale-75 sm:scale-90 lg:scale-100">
+          <div className="relative scale-75 sm:scale-90 lg:scale-100 h-80 w-80">
 
-            <div className="h-80 w-80 rounded-full border border-violet-500/40"></div>
+            {/* Outer orbit rings */}
+            <div className="absolute inset-0 rounded-full border border-violet-500/30"></div>
+            <div className="absolute inset-8 rounded-full border border-cyan-400/30"></div>
 
-            <div className="absolute inset-8 rounded-full border border-cyan-400/40"></div>
+            {/* Aperture icon */}
+            <svg
+              viewBox="0 0 200 200"
+              className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2"
+            >
+              <defs>
+                <linearGradient id="apertureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#8b5cf6" />
+                  <stop offset="100%" stopColor="#22d3ee" />
+                </linearGradient>
+              </defs>
 
-            <div className="absolute inset-16 rounded-full border border-violet-400/40"></div>
+              {/* Outer glow circle */}
+              <circle cx="100" cy="100" r="95" fill="url(#apertureGradient)" opacity="0.15" />
 
-            <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-violet-500 to-cyan-400 shadow-[0_0_80px_rgba(124,58,237,0.8)]"></div>
+              {/* Aperture blades */}
+              {[0, 60, 120, 180, 240, 300].map((angle, i) => (
+                <polygon
+                  key={i}
+                  points="100,100 100,20 140,35"
+                  fill="url(#apertureGradient)"
+                  opacity="0.85"
+                  transform={`rotate(${angle} 100 100)`}
+                />
+              ))}
+
+              {/* Center lens hole */}
+              <circle cx="100" cy="100" r="28" fill="#050816" />
+              <circle cx="100" cy="100" r="28" stroke="url(#apertureGradient)" strokeWidth="2" fill="none" />
+
+              {/* Lens glint */}
+              <circle cx="90" cy="88" r="6" fill="white" opacity="0.6" />
+            </svg>
+
+            <div
+              className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full"
+              style={{ boxShadow: "0 0 100px rgba(124,58,237,0.5)" }}
+            ></div>
+
+            {/* Small orbiting accent dots */}
+            <div className="absolute -top-2 left-1/2 h-4 w-4 -translate-x-1/2 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.8)]"></div>
+            <div className="absolute bottom-4 right-4 h-3 w-3 rounded-full bg-violet-400 shadow-[0_0_15px_rgba(167,139,250,0.8)]"></div>
 
           </div>
 
