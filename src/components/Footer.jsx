@@ -26,14 +26,15 @@ function Footer() {
         </div>
 
         {/* Legal */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">Legal</h3>
-          <ul className="space-y-2 text-slate-400 text-sm">
-            <li><Link to="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
-            <li><Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link></li>
-            <li><Link to="/user-agreement" className="hover:text-white transition">User Agreement</Link></li>
-          </ul>
-        </div>
+<div>
+  <h3 className="text-white font-semibold mb-4">Legal</h3>
+  <ul className="space-y-2 text-slate-400 text-sm">
+    <li><Link to="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
+    <li><Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link></li>
+    <li><Link to="/user-agreement" className="hover:text-white transition">User Agreement</Link></li>
+    <li><Link to="/creator-agreement" className="hover:text-white transition">Creator Agreement</Link></li>
+  </ul>
+</div>
 
         {/* Social */}
         <div>
