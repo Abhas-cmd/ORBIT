@@ -8,16 +8,16 @@ function Hero() {
       <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-violet-600/20 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl items-center justify-between px-8">
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-12 px-6 pt-28 pb-16 lg:flex-row lg:justify-between lg:pt-0">
 
         {/* Left Side */}
-        <div className="max-w-2xl">
+        <div className="max-w-2xl text-center lg:text-left">
 
-          <p className="mb-5 uppercase tracking-[0.4em] text-cyan-400">
+          <p className="mb-5 uppercase tracking-[0.4em] text-cyan-400 text-sm sm:text-base">
             Welcome to ORBIT
           </p>
 
-          <h1 className="text-6xl font-bold leading-tight lg:text-7xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             Build Smarter.
             <br />
             Create Faster.
@@ -25,15 +25,15 @@ function Hero() {
             Collaborate Anywhere.
           </h1>
 
-          <p className="mt-8 text-lg text-slate-400">
+          <p className="mt-8 text-base sm:text-lg text-slate-400">
             ORBIT empowers creators, developers, and businesses with
             intelligent collaboration, automation, and cloud-native
             workflows.
           </p>
 
-          <div className="mt-10 flex gap-5">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start">
 
-            <button className="flex items-center gap-2 rounded-full bg-violet-600 px-8 py-4 transition hover:bg-violet-500">
+            <button className="flex items-center justify-center gap-2 rounded-full bg-violet-600 px-8 py-4 transition hover:bg-violet-500">
               Get Started
               <ArrowRight size={18} />
             </button>
@@ -47,9 +47,9 @@ function Hero() {
         </div>
 
         {/* Right Side */}
-        <div className="hidden lg:flex items-center justify-center">
+        <div className="flex items-center justify-center">
 
-          <div className="relative">
+          <div className="relative scale-75 sm:scale-90 lg:scale-100">
 
             <div className="h-80 w-80 rounded-full border border-violet-500/40"></div>
 
