@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send } from "lucide-react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -12,8 +15,30 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+
+    emailjs
+      .send(
+        "service_2tx5ivd",
+        "template_414crv9",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          title: "New Website Enquiry",
+          time: new Date().toLocaleString("en-IN"),
+        },
+        "fPl1vk8_QpJCTjyWs"
+      )
+      .then(() => {
+        setSubmitted(true);
+        setSending(false);
+      })
+      .catch(() => {
+        setError("Something went wrong. Please try again or email us directly.");
+        setSending(false);
+      });
   };
 
   return (
@@ -70,8 +95,9 @@ function Contact() {
                   <label className="block text-sm text-slate-400 mb-1">Message</label>
                   <textarea name="message" required rows="5" value={formData.message} onChange={handleChange} className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-white/40 transition resize-none" placeholder="Tell us what's on your mind..." />
                 </div>
-                <button type="submit" className="w-full bg-white text-black hover:bg-slate-200 transition rounded-md py-3 font-semibold flex items-center justify-center gap-2">
-                  Send Message <Send size={18} />
+                {error && <p className="text-red-400 text-sm">{error}</p>}
+                <button type="submit" disabled={sending} className="w-full bg-white text-black hover:bg-slate-200 transition rounded-md py-3 font-semibold flex items-center justify-center gap-2 disabled:opacity-60">
+                  {sending ? "Sending..." : "Send Message"} <Send size={18} />
                 </button>
               </form>
             )}
